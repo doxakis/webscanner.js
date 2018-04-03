@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+        <style>
+            .container {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1><code>webscanner.js</code></h1>
+            <button id="startCapture">Scan</button>
+
+            <h1><code>Results:</code></h1>
+            <img src="" />
+        </div>
+        
+        <style>
+            #webscanner {
+                position: fixed; /* Sit on top of the page content */
+                display: none; /* Hidden by default */
+                width: 100%; /* Full width (cover the whole page) */
+                height: 100%; /* Full height (cover the whole page) */
+                top: 0; 
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(0,0,0,0.9); /* Black background with opacity */
+                z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+                cursor: pointer; /* Add a pointer on hover */
+            }
+            #webscanner video {
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                max-width: 100%;
+                max-height: 100%;
+                margin: auto;
+                overflow: auto;
+                z-index: -100;
+            }
+            #webscanner #btn-bottom {
+                position: fixed;
+                bottom: 0;
+                text-align: center;
+                padding: 10px;
+                width: 100%;
+            }
+            #webscanner #btn-top {
+                position: fixed;
+                top: 0;
+                text-align: left;
+                padding: 10px;
+                width: 100%;
+            }
+            #webscanner button {
+                padding: .375rem 1rem;
+                border-radius: .25rem;
+                background-color: #f8f9fa;
+            }
+        </style>
+        <div id="webscanner">
+            <video autoplay></video>
+            <p id="btn-top">
+                <button id="close">Close</button>
+            </p>
+            <p id="btn-bottom">
+                <button id="capture">Capture</button>
+                <button id="change">Change camera</button>
+            </p>
+        </div>
+        
+        <script src="webscanner.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
